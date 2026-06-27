@@ -192,6 +192,7 @@ def main()-> None:
 	import argparse
 	parser = argparse.ArgumentParser()
 	parser.add_argument("file", help="要执行的文件")
+	parser.add_argument("-P", "--preprocess-only", action="store_true", help="输出预处理后的代码并退出")
 
 	if len(sys.argv[1:]) == 0:
 		parser.print_help()
@@ -204,6 +205,10 @@ def main()-> None:
 	except FileNotFoundError:
 		print(f"subfish: file {args.file} not found", file=sys.stderr)
 		sys.exit(1)
+
+	if args.preprocess_only:
+		print(preprocess(source))
+		sys.exit(0)
 
 	env = Subfish()
 	env.feed(preprocess(source))
