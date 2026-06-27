@@ -1,0 +1,23 @@
+iiiii iiiii s       # 100
+iiii c              # 104(h), putc
+ddd c               # 101(e), putc
+iiiii ii cc         # 108(l), putc twice
+iii c               # 111(o), putc
+
+t                   # switch to accumulator 2
+
+iiiii ii s          # 49
+ddddd c             # 44(,), putc
+
+t                   # switch to accumulator 3
+
+iiiii i s           # 36
+dddd c              # 32(SPACE), putc
+
+t                   # switch to accumulator 1
+
+iiiii iii c         # 119(w), putc
+ddddd ddd c         # 111(o), putc
+iii c               # 114(r), putc
+ddddd d c           # 108(l), putc
+ddddd ddd c         # 100(d), putc

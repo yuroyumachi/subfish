@@ -1,0 +1,24 @@
+t                 # switch to accumulator 2
+iiiii ii s d      # [0, 48 ,0]
+
+t                 # switch to accumulator 3
+iiiii ii s        # [0, 48 ,49]
+
+tk                # switch to accumulator 1, getc
+
+t                 # switch to accumulator 2
+mz                # ::mark, if (cur_acc != 0)
+d                 # minus 1
+tt d              # switch to accumulator 1, minus 1
+t                 # switch to accumulator 2
+p                 # goto mark
+nnnn
+
+tt                # switch to accumulator 1
+z                 # if (cur_acc != 0)
+tt                # switch to accumulator 3
+mcp               # loop print 1
+nnnnn n
+tt                # switch to accumulator 3
+d                 # minus 1
+ch                # print 0 and exit
